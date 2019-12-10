@@ -3,17 +3,7 @@
         {
             "name": "utente",
             "alwaysPresent": false,
-            "endpoint": "http://localhost:4201/main.js",
-            "menu": {
-                "materialicon": "home",
-                "label": "UTENTE",
-                "route": "/utente",
-                "isClicked": false
-            },
-            "parcels": [
-                "parcel",
-                "utente"
-            ]
+            "endpoint": "http://localhost:4201/main.js"
         },
         {
             "name": "parcel",
