@@ -25,7 +25,7 @@ fetch(myRequest)
         spaJs += `singleSpa.registerApplication(
           '${element.name}',
           () => System.import('${element.name}'),
-          location => ${element.alwaysPresent ? true : 'location.pathname.startsWith("/' + element.name + '")'},
+          location => ${element.alwaysPresent ? true : 'location.pathname.startsWith("/")'},
           {eev: e ${element.name === 'menu' ? ', endpoints:' + JSON.stringify(value.endpoints) : ''},
           parcel: () => System.import('parcel')}
         );

@@ -1,0 +1,26 @@
+{
+  "name": "micro-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"npm run parcel\" \"npm run utente\" \"npm run base\"",
+    "base": "cd ./hos-single-spa && npm start",
+    "parcel": "cd ./parcel && npm run serve:single-spa",
+    "utente": "cd ./utente && npm run serve:single-spa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardofct/micro-frontend.git"
+  },
+  "author": "Ricardo Trindade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardofct/micro-frontend/issues"
+  },
+  "homepage": "https://github.com/ricardofct/micro-frontend#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.1"
+  }
+}

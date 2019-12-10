@@ -27,7 +27,6 @@ export class TesteComponent implements OnDestroy, OnInit, AfterContentChecked {
         const parcel = mountRootParcel(this.singleSpaProps['parcel'], parcelProps);
         // The parcel is being mounted. We can wait for it to finish with the mountPromise.
         const mounted = await parcel.mountPromise;
-        debugger
       }
     );
   }
