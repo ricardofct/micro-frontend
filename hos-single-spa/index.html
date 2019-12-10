@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>S3 Micro Frontends POC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="importmap-type" content="systemjs-importmap">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@4.3.7/lib/system/single-spa.min.js" as="script"
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/zone.js/dist/zone.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.8.0/dist/import-map-overrides.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/system.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/amd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/named-exports.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/named-register.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/use-default.min.js"></script>
+
+  <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: rgba(245, 246, 250, 1);
+    }
+
+    .cdk-overlay-container {
+      display: none;
+    }
+
+    #content {
+      position: relative;
+      overflow: auto;
+      box-sizing: border-box;
+      height: calc(100% - 70px);
+      top: 70px;
+      padding: 0 40px 0 120px;
+      transition: 0.5s padding ease;
+    }
+
+    #content.expanded {
+      padding-left: 286px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="menu"></div>
+  <div id="content"></div>
+
+  <script src="/dist/single-spa.config.js"></script>
+  <!-- See https://github.com/joeldenning/import-map-overrides#user-interface  -->
+  <import-map-overrides-full show-when-local-storage="overrides-ui"></import-map-overrides-full>
+</body>
+
+</html>
