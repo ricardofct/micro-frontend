@@ -1,17 +1,6 @@
 {
     "endpoints": [
         {
-            "name": "menu",
-            "alwaysPresent": true,
-            "endpoint": "http://localhost:4202/main.js",
-            "menu": {
-                "materialicon": "360",
-                "label": "360",
-                "route": "/360",
-                "isClicked": false
-            }
-        },
-        {
             "name": "utente",
             "alwaysPresent": false,
             "endpoint": "http://localhost:4201/main.js",
